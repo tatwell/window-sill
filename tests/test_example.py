@@ -5,7 +5,6 @@ Example Test File
 To run:
 
     nosetests -c nose.cfg
-    python
 
 """
 from unittest import TestCase
