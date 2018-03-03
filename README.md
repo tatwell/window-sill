@@ -26,5 +26,25 @@ A project to test building simple Python desktop applications for Ubuntu and Mac
 
 ## Usage
 
+To run the app:
+
+    python app.py
+
+For more usage details:
+
+    python app.py -h
+
 
 ## Testing
+
+To run tests:
+
+    nosetests -c nose.cfg
+
+Verbosely:
+
+    nosetests -c nose.cfg -v
+
+To run a single test:
+
+    nosetests -c nose.cfg tests/test_example.py
