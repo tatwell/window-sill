@@ -1,0 +1,13 @@
+#
+# Pip Requirements
+#
+# To Install:
+#   pip install -r requirements.txt
+#
+
+#
+# Test Dependencies
+#
+nose
+coverage
+nose-exclude
