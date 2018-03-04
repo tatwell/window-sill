@@ -6,6 +6,8 @@ Like py on a window sill.
 """
 import argparse
 
+from gui.tk_gui import TinkerGUI
+
 
 # Constants
 DESCRIPTION = """\
@@ -27,7 +29,8 @@ parser.add_argument('command', nargs='?', default='null', help='Choose a command
 #
 def main():
     args = parser.parse_args()
-    print(args)
+    app = TinkerGUI()
+    app.loop()
 
 
 #
