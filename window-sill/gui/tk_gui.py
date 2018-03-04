@@ -1,23 +1,28 @@
-from tkinter import Tk
+"""
+Tkinter GUI
+
+REFERENCES
+https://docs.python.org/3/library/tkinter.html#a-simple-hello-world-program
+"""
+import tkinter as tk
 
 import config
 
 
-class TinkerGUI(object):
+class ApplicationGUI(tk.Frame):
     def __init__(self, **options):
         title = options.get('title', config.app.TITLE)
         width = options.get('width', config.app.WIDTH)
         height = options.get('height', config.app.HEIGHT)
 
-        self.window = self._init_window()
+        self.window = tk.Tk()
+        super().__init__(self.window)
+
         self.screen_width = self.window.winfo_screenwidth()
         self.screen_height = self.window.winfo_screenheight()
 
         self.set_title(title)
         self.set_window_size(width, height)
-
-    def loop(self):
-        self.window.mainloop()
 
     def set_title(self, title):
         self.window.title(title)
@@ -31,6 +36,3 @@ class TinkerGUI(object):
         geometry = geometry_f.format(w=width, h=height, x=x, y=y)
         self.window.geometry(geometry)
         return self
-
-    def _init_window(self):
-        return Tk()
