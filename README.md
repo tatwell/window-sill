@@ -8,6 +8,12 @@ A project to test building simple Python desktop applications for Ubuntu and Mac
 
 
 ## Setup
+- Install the Tkinter system package. This must be installed before installing Python with pyenv as recommended below. On Ubuntu:
+
+      sudo apt-get install tk-dev
+
+    See this StackOverflow post for more information: https://stackoverflow.com/q/26357567/1093087
+
 - [Install Pyenv](https://wiki.formulafolios.com/view/Best_Practices:Python#Pyenv) and version of Python set in `.python-version`:
 
       pyenv install 3.6.4
@@ -28,6 +34,7 @@ A project to test building simple Python desktop applications for Ubuntu and Mac
 
 To run the app:
 
+    cd window-sill/window-sill
     python app.py
 
 For more usage details:
@@ -39,6 +46,7 @@ For more usage details:
 
 To run tests:
 
+    cd window-sill/window-sill
     nosetests -c nose.cfg
 
 Verbosely:
